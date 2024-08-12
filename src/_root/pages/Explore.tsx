@@ -9,7 +9,7 @@ import { useGetPosts, useSearchPosts } from "@/lib/react-query/queries";
 export type SearchResultProps = {
   isSearchFetching: boolean;
   searchedPosts: any;
-};
+}; 
 
 const SearchResults = ({ isSearchFetching, searchedPosts }: SearchResultProps) => {
   if (isSearchFetching) {
@@ -32,9 +32,7 @@ const Explore = () => {
   const { data: searchedPosts, isFetching: isSearchFetching } = useSearchPosts(debouncedSearch);
 
   useEffect(() => {
-    if (inView && !searchValue) {
-      fetchNextPage();
-    }
+    if (inView && !searchValue)  fetchNextPage();
   }, [inView, searchValue]);
 
   if (!posts)
