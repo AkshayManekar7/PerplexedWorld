@@ -95,7 +95,7 @@ const Explore = () => {
         ) : (
           posts.pages.map((item) => (
             // <GridPostList key={'page-${index}'} posts = {item?.documents} />
-            <GridPostList posts={[]} key={'page-{}'} {...item?.documents}/>
+            <GridPostList posts={[]} {...item?.documents}/>
           ))
         )}
       </div>
